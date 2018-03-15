@@ -1,0 +1,15 @@
+C:\Users\nunezs\Desktop\Project1\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\nunezs\Desktop\Project1\bin\Debug\Microsoft.Xrm.Sdk.Deployment.dll
+C:\Users\nunezs\Desktop\Project1\bin\Debug\Microsoft.Xrm.Tooling.Connector.xml
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.csproj.CoreCompileInputs.cache
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.csprojResolveAssemblyReference.cache
+C:\Users\nunezs\Desktop\Project1\bin\Debug\CRMTool.exe.config
+C:\Users\nunezs\Desktop\Project1\bin\Debug\CRMTool.exe
+C:\Users\nunezs\Desktop\Project1\bin\Debug\CRMTool.pdb
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.exe
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.pdb
+C:\Users\nunezs\Desktop\Project1\bin\Debug\CRMTool.exe.manifest
+C:\Users\nunezs\Desktop\Project1\bin\Debug\CRMTool.application
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.TrustInfo.xml
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.exe.manifest
+C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.application
