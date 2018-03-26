@@ -77,8 +77,6 @@ Every CSV file consists of the same first line that will communicate to the prog
   </tr>
  
 </table>
-<br>
-<br>
 
 <table style="width:100%">
   <tr>
