@@ -9,16 +9,16 @@ Every CSV file consists of the same first line that will communicate to the prog
 
 <table style="width:100%">
   <tr>
-    <th>Create</th>
-    <th>Update</th> 
-    <th>Delete</th>
+    <th><i>Create</i></th>
+    <th><i>Update</i></th> 
+    <th><i>Delete</i></th>
   </tr>
   <tr>
     <td>
       <table>
         <tr>
           <td>Entity</td>
-          <td>Action</td>
+          <td><strong>Create</strong></td>
           <td></td>
           <td></td>
         </tr>
@@ -40,7 +40,7 @@ Every CSV file consists of the same first line that will communicate to the prog
     <table>
         <tr>
           <td>Entity</td>
-          <td>Action</td>
+          <td><strong>Update</strong></td>
           <td></td>
           <td></td>
         </tr>
@@ -62,7 +62,7 @@ Every CSV file consists of the same first line that will communicate to the prog
     <table>
         <tr>
           <td>Entity</td>
-          <td>Action</td>
+          <td><strong>Delete</strong></td>
         </tr>
         <tr>
           <td>GUID</td>
@@ -77,3 +77,72 @@ Every CSV file consists of the same first line that will communicate to the prog
   </tr>
  
 </table>
+<br>
+<br>
+
+<table style="width:100%">
+  <tr>
+    <th><i>Example Create</i></th>
+    <th><i>Example Update</i></th> 
+    <th><i>Example Delete</i></th>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td>Contact</td>
+          <td><strong>Create</strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>firstname</td>
+          <td>lastname</td>
+        </tr>
+        <tr>
+          <td>Anakin</td>
+          <td>Skywalker</td>
+        </tr>
+      </table>
+    </td>
+     <td>
+    <table>
+        <tr>
+          <td>Conctact</td>
+          <td><strong>Update</strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>GUID</td>
+          <td>firstname</td>
+          <td>lastname</td>
+        </tr>
+        <tr>
+          <td><strong><i>XXXXXX</i></strong></td>
+          <td>Darth</td>
+          <td>Vader</td>
+        </tr>
+      </table>
+  </td>
+    <td>
+    <table>
+        <tr>
+          <td>Contact</td>
+          <td><strong>Delete</strong></td>
+        </tr>
+        <tr>
+          <td>GUID</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><i>XXXXXX</i></strong></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+ 
+</table>
+
+
