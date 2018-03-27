@@ -14,8 +14,6 @@ C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.TrustInfo.xml
 C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.exe.manifest
 C:\Users\nunezs\Desktop\Project1\obj\Debug\CRMTool.application
 C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.exe.config
-C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.exe.manifest
-C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.application
 C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.exe
 C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.pdb
 C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
@@ -25,8 +23,10 @@ C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.csprojResolveAssembly
 C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\Interop.IWshRuntimeLibrary.dll
 C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.csproj.ResolveComReference.cache
 C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.csproj.CoreCompileInputs.cache
+C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.exe
+C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.pdb
+C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.exe.manifest
+C:\Users\nunezs\Documents\GitHub\CRMTool\bin\Debug\CRMTool.application
 C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.TrustInfo.xml
 C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.exe.manifest
 C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.application
-C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.exe
-C:\Users\nunezs\Documents\GitHub\CRMTool\obj\Debug\CRMTool.pdb

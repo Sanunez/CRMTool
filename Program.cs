@@ -54,6 +54,7 @@ namespace CRMTool
             //File Specific Variables
             public static string ENTITY;
             public static string ACTION;
+            public static string MODE;
             public static List<string> SUPPORTEDACTIONS = new List<string>(){ "create", "delete", "update" };
             public static List<string> types = new List<string>();
             public static List<string> fields = new List<string>();
@@ -70,7 +71,7 @@ namespace CRMTool
             System.IO.Directory.CreateDirectory(Globals.PROJDIR + "\\Error");
         }
 
-        static void getUserData()
+        static void getSettings()
         {
             if(File.Exists("settings.txt"))
             {
@@ -79,6 +80,7 @@ namespace CRMTool
                 Globals.PASSWORD = infile.ReadLine();
                 Globals.COMP_URL = infile.ReadLine();
                 Globals.ORG_NAME = infile.ReadLine();
+                Globals.MODE = infile.ReadLine();
                 infile.Close();
             }
             else
@@ -94,17 +96,20 @@ namespace CRMTool
                 Globals.COMP_URL = Console.ReadLine();
                 Console.Write("Organization Name: ");
                 Globals.ORG_NAME = Console.ReadLine();
+                Console.Write("Mode(f/d): ");
+                Globals.MODE = Console.ReadLine();
                 settingsfile.WriteLine(Globals.USERNAME);
                 settingsfile.WriteLine(Globals.PASSWORD);
                 settingsfile.WriteLine(Globals.COMP_URL);
                 settingsfile.WriteLine(Globals.ORG_NAME);
+                settingsfile.WriteLine(Globals.MODE);
                 settingsfile.Close();
             }
         }
 
         static void ProcessFile(string filename)
         {
-
+            int COUNT = 1;
             //Open Input File
             StreamReader infile = new StreamReader(filename);
 
@@ -143,11 +148,12 @@ namespace CRMTool
             //Check for matching attribute fields
             foreach (string field in Globals.fields)
             {
-                if(!Globals.legend.ContainsKey(field))
+                if (!field.ToLower().Equals("guid") && !Globals.legend.ContainsKey(field))
                 {
                     infile.Close();
                     throw new Exception("\"" + Globals.ENTITY + "\" does not have an attribute " + " \"" + field + "\" associated with it, please check file.");
                 }
+                
             }
 
             //Read through the rest of the input file collecting each record in a list
@@ -171,6 +177,7 @@ namespace CRMTool
             {
                 try
                 {
+                    Console.Write("Line " + COUNT + ": ");
                     ProcessEntry(entry);
                 }
                 catch
@@ -178,10 +185,11 @@ namespace CRMTool
                     Console.WriteLine("There was a problem with the record, Please check Error file for line.");
                     File.AppendAllText(Globals.ERRDIR + "ErrorLines_" + Path.GetFileName(filename), string.Join(",",entry.Values));
                 }
-                
+                COUNT++;
             }
 
             infile.Close();
+
         }
 
         static void ProcessEntry(Dictionary<string, string> entry)
@@ -212,14 +220,15 @@ namespace CRMTool
                     try
                     {
                         Console.WriteLine("Updating " + Globals.ENTITY);
-                        ColumnSet attributes = new ColumnSet(new string[] { "firstname", "lastname" });
+                        ColumnSet attributes = new ColumnSet(new string[] { });
                         ent = Globals.crmService.Retrieve(ent.LogicalName, new Guid(entry["GUID"]), attributes);
+                        entry.Remove("GUID");
                         foreach (string key in entry.Keys)
                         {
                             Console.WriteLine(key + " : " + entry[key]);
                             ent = AddAttribute(ent, key, entry[key]);
                         }
-                        ent.Attributes.Remove("GUID");
+                        
                         //UPDATE CRM ENTITY
                         Globals.crmService.Update(ent);
                     }
@@ -312,7 +321,7 @@ namespace CRMTool
         
         static void Main(string[] args)
         {
-            getUserData();
+            getSettings();
             FolderSetup();
             IEnumerable<string> files = Directory.EnumerateFiles(Globals.PROJDIR + "\\In");
             if (files.Any())
@@ -336,6 +345,7 @@ namespace CRMTool
             {
                 Console.Write("No Files Found!");
             }
+            Console.Read();
         }
 
     }
